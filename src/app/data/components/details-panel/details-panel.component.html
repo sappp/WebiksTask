@@ -1,0 +1,54 @@
+<p *ngIf="!trainee">
+  <span>Selecet or add a trainee</span>
+</p>
+<div *ngIf="trainee">
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>ID</th>
+        <td>
+          {{trainee.id}}
+        </td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td style="width:70%; height:24px;">
+          <editable-field [typeName]="'name'" [detail]="trainee.name" (updateDataUpToDetailsPanel)="updateDataSecond($event)"  [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field>
+        </td>
+      </tr>
+      <tr>
+        <th>Grade</th>
+        <td><editable-field [typeName]="'grade'" [detail]="trainee.grade" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><editable-field [typeName]="'email'" [detail]="trainee.email" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>Date Joined</th>
+        <td><editable-field [typeName]="'dateJoined'" [detail]="trainee.dateJoined" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td><editable-field [typeName]="'address'" [detail]="trainee.address" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>City</th>
+        <td><editable-field [typeName]="'city'" [detail]="trainee.city" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>Country</th>
+        <td><editable-field [typeName]="'country'" [detail]="trainee.country" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>ZIP</th>
+        <td><editable-field [typeName]="'zip'" [detail]="trainee.zip" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+      <tr>
+        <th>Subject</th>
+        <td><editable-field [typeName]="'subject'" [detail]="trainee.subject" (updateDataUpToDetailsPanel)="updateDataSecond($event)" [newTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event) "></editable-field></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

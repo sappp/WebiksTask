@@ -1,0 +1,26 @@
+<div class="col-md-9">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Trainees Data</div>
+      <div class="panel-body">
+        <app-search-bar (updateTableByFilter)="filterByThisSearch = $event"></app-search-bar>
+      </div>
+        <app-data-table [trainees]="trainees" [filterByThisSearch]="filterByThisSearch" (onSelectedTrainee)="onSelectedTrainee($event)"></app-data-table>
+      <!-- Table -->
+
+    </div>
+
+
+  </div>
+  <div class="col-md-3">
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Details</div>
+      <div class="panel-body">
+        <app-add-remove [trainee]="selectedTrainee" (removeTraineeUp)=removeTrainee($event) (addTraineeUp)=addTrainee($event)></app-add-remove>
+      </div>
+        <app-details-panel [trainee]="selectedTrainee" (updateDataToData)=updateDataMain($event) (removeTrainee)=removeTrainee($event) [addNewTraineeState]="addNewTraineeState" (newTraineeUpdateFieldsOutput)="newTraineeUpdateFields($event)"></app-details-panel>
+      <!-- Table -->
+
+  </div>

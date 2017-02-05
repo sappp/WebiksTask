@@ -1,0 +1,9 @@
+<div (dblclick)="toggleStateShowEditIcon()">
+  <span *ngIf="!showEditIconState && newTraineeState != 0">{{detail}}</span>
+
+  <span *ngIf="showEditIconState || newTraineeState == 0">
+    <input style="width:70%; height:24px; display: inline;" type="text" class="form-control" placeholder="enter" [(ngModel)]="modelDetail" />
+      <button type="button" class="btn btn-default btn-circle" style="float:right;" (click)="makeChanges()" *ngIf="newTraineeState != 0"><i class="glyphicon glyphicon-ok"></i></button>
+      <button type="button" class="btn btn-default btn-circle" style="float:right;" (click)="cancelChanges()" *ngIf="newTraineeState != 0"><i class="glyphicon glyphicon-remove"></i></button>
+  </span>
+</div>

@@ -1,0 +1,7 @@
+.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.colorAddButton {
+   background-color:#d9edf7
+}

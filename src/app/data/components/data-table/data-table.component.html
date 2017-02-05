@@ -1,0 +1,31 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Date
+      </th>
+      <th>
+        Grade
+      </th>
+      <th>
+        Subject
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of trainees | search:filterByThisSearch" (click)="selectTrainee(t)" [ngClass]="{'info' : selectedTraineeId == t.id}">
+      <th>{{t.id}}</th>
+      <th>{{t.name}}</th>
+      <th>{{t.dateJoined}}</th>
+      <th>{{t.grade}}</th>
+      <th>{{t.subject}}</th>
+    </tr>
+
+  </tbody>
+</table>
